@@ -28,7 +28,36 @@ while (bandera1==True):
         datos_subir=editar_ciudad(datos)
         guardar_datos(datos_subir, "ciudades.json")
         print("")
-    
+
+    elif opcion=="4":
+        datos=cargar_datos("ciudades.json")
+        while (bandera2==True):
+            print("Estas son las opciones de busqueda:")
+            print("1. Buscar por nombre")
+            print("2. Buscar por país")
+            print("3. Buscar por código postal")
+            opcion2=input("Seleccione la opción que desea realizar:")
+
+            if opcion2=="1":
+                buscar_ciudad_nombre(datos)
+                bandera2=False
+
+            elif opcion2=="2":
+                buscar_ciudad_pais(datos)
+                bandera2=False
+
+            elif opcion2=="3":
+                buscar_ciudad_postal(datos)
+                bandera2=False
+
+            else:
+                print("Opcion invalida")
+  
+    elif opcion=="6":
+        datos=cargar_datos("ciudades.json")
+        guardar_datos(datos, "ciudades_exportadas.json")
+        print("Datos exportados con éxito al archivo 'ciudades_exportadas.json'")
+
     elif opcion=="7":
         print("Hasta pronto!")
         bandera1=False
