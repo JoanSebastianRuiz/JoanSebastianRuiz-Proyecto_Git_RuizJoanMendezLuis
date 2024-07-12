@@ -1,6 +1,6 @@
 # Proyecto Git
 
-Backend para el registro, la modificacion,.
+Backend para el registro, la modificacion, busqueda y filtrado de ciudades.
 
 
 ## Tabla de contenido 📋
