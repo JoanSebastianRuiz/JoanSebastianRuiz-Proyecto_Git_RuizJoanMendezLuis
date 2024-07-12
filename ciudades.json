@@ -1,0 +1,10 @@
+{
+    "ciudades":[
+        {
+            "nombre": "Bucaramanga",
+            "postal": "69100",
+            "poblacion": 50000,
+            "pais": "Colombia"
+        }
+    ]
+}
