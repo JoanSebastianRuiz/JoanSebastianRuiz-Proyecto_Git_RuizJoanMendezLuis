@@ -32,3 +32,9 @@ def editar_ciudad(datos):
             
     print("Ciudad actualizada con éxito!")
     return datos
+
+def leer_ciudades(datos):
+    for ciudad in datos["ciudades"]:
+        for llave,valor in ciudad.items():
+            print(f"{llave.capitalize()}: {valor}")
+        print("")

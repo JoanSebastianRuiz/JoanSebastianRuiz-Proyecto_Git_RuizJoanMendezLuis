@@ -17,6 +17,8 @@ while (bandera1==True):
     print("")
 
     opcion=input("Seleccione la opción que desea realizar:")
+    print("")
+    
     if opcion=="1":
         datos=cargar_datos("ciudades.json")
         datos_subir=crear_ciudad(datos)
@@ -29,6 +31,10 @@ while (bandera1==True):
         guardar_datos(datos_subir, "ciudades.json")
         print("")
     
+    elif opcion=="3":
+        datos=cargar_datos("ciudades.json")
+        leer_ciudades(datos)
+    
     elif opcion=="7":
         print("Hasta pronto!")
         bandera1=False
@@ -39,7 +45,6 @@ while (bandera1==True):
 
 
 """
-    elif opcion=="3":
 
     elif opcion=="4":
         while (bandera2==True):
