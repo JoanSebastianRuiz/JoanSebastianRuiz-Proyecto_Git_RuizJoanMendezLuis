@@ -1,3 +1,6 @@
+from ciudades import *
+from datos import *
+
 bandera1=True
 
 while (bandera1==True):
@@ -11,12 +14,31 @@ while (bandera1==True):
     print("5. Filtrar ciudades")
     print("6. Exportar datos")
     print("7. Salir")
+    print("")
 
     opcion=input("Seleccione la opción que desea realizar:")
     if opcion=="1":
+        datos=cargar_datos("ciudades.json")
+        datos_subir=crear_ciudad(datos)
+        guardar_datos(datos_subir, "ciudades.json")
+        print("")
 
     elif opcion=="2":
+        datos=cargar_datos("ciudades.json")
+        datos_subir=editar_ciudad(datos)
+        guardar_datos(datos_subir, "ciudades.json")
+        print("")
+    
+    elif opcion=="7":
+        print("Hasta pronto!")
+        bandera1=False
 
+    else:
+        print("Opcion invalida")
+        print("")
+
+
+"""
     elif opcion=="3":
 
     elif opcion=="4":
@@ -63,14 +85,8 @@ while (bandera1==True):
 
                 
     elif opcion=="6":
+"""
 
-
-    elif opcion=="7":
-        print("Hasta pronto!")
-        bandera1=False
-
-    else:
-        print("Opcion invalida")
 
 
 
