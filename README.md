@@ -1,4 +1,4 @@
-# QuickTracker
+# Proyecto Git
 
 Backend para el registro, la modificacion,.
 
