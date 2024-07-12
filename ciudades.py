@@ -7,7 +7,7 @@ def crear_ciudad(datos):
         ciudad["poblacion"]=int(input("Ingrese la población estimada: "))
     except Exception:
         print("¡Valor ingresado no válido!")
-        print("Se debe actualizar luego con la opción (2) 'Editar las ciudades existentes'")
+        print("Se debe actualizar luego con la opción (2) 'Modificar ciudad'")
         ciudad["poblacion"]=0
     ciudad["pais"]=input("Ingrese el País: ")
 
@@ -32,3 +32,30 @@ def editar_ciudad(datos):
             
     print("Ciudad actualizada con éxito!")
     return datos
+
+def buscar_ciudad_nombre(datos):
+    datos = dict(datos)
+    ciudad = input("Ingrese el nombre de la ciudad: ")
+    for i in range(len(datos["ciudades"])):
+        print("")
+        if datos["ciudades"][i]["nombre"] == ciudad:
+            for llave,valor in datos["ciudades"][i].items():
+                print(f"{llave.capitalize()}: {valor}")
+
+def buscar_ciudad_pais(datos):
+    datos = dict(datos)
+    pais = input("Ingrese el pais: ")
+    for i in range(len(datos["ciudades"])):
+        print("")
+        if datos["ciudades"][i]["pais"] == pais:
+            for llave,valor in datos["ciudades"][i].items():
+                print(f"{llave.capitalize()}: {valor}")
+
+def buscar_ciudad_postal(datos):
+    datos = dict(datos)
+    postal = input("Ingrese el pais: ")
+    for i in range(len(datos["ciudades"])):
+        print("")
+        if datos["ciudades"][i]["postal"] == postal:
+            for llave,valor in datos["ciudades"][i].items():
+                print(f"{llave.capitalize()}: {valor}")
