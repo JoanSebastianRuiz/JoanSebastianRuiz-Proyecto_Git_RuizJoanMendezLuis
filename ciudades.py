@@ -38,3 +38,36 @@ def leer_ciudades(datos):
         for llave,valor in ciudad.items():
             print(f"{llave.capitalize()}: {valor}")
         print("")
+
+def filtrar_ciudades_poblacion_mayor(datos):
+    while (True):
+        poblacion=input("Ingrese la poblacion con la que desea filtrar las ciudades: ")
+        if poblacion.isnumeric():
+            break
+        else:
+            print("Número de poblacion invalida")
+    
+    print("")
+    print(f"Las ciudades con una población mayor a {poblacion} son: ")
+
+    for ciudad in datos["ciudades"]:
+        if ciudad["poblacion"]>int(poblacion):
+            for llave,valor in ciudad.items():
+                print(f"{llave.capitalize()}: {valor}")
+            print("")
+
+def filtrar_ciudades_poblacion_menor(datos):
+    while (True):
+        poblacion=input("Ingrese la poblacion con la que desea filtrar las ciudades: ")
+        if poblacion.isnumeric():
+            break
+        else:
+            print("Número de poblacion invalida")
+    print("")
+    print(f"Las ciudades con una población mayor a {poblacion} son: ")
+
+    for ciudad in datos["ciudades"]:
+        if ciudad["poblacion"]<int(poblacion):
+            for llave,valor in ciudad.items():
+                print(f"{llave.capitalize()}: {valor}")
+            print("")

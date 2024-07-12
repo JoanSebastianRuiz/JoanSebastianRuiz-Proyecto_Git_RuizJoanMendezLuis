@@ -18,7 +18,7 @@ while (bandera1==True):
 
     opcion=input("Seleccione la opción que desea realizar:")
     print("")
-    
+
     if opcion=="1":
         datos=cargar_datos("ciudades.json")
         datos_subir=crear_ciudad(datos)
@@ -35,6 +35,28 @@ while (bandera1==True):
         datos=cargar_datos("ciudades.json")
         leer_ciudades(datos)
     
+    elif opcion=="5":
+        print("1. Obtener ciudades con poblacion mayor a un numero especifico")
+        print("2. Obtener ciudades con poblacion menor a un numero especifico")
+        print("")
+        opcion2=input("Seleccione la opción que desea realizar:")
+        print("")
+
+        while (bandera2==True):
+            if opcion2=="1":
+                datos=cargar_datos("ciudades.json")
+                filtrar_ciudades_poblacion_mayor(datos)
+                bandera2=False
+
+            elif opcion2=="2":
+                datos=cargar_datos("ciudades.json")
+                filtrar_ciudades_poblacion_menor(datos)
+                bandera2=False
+
+            else:
+                print("Opcion invalida")
+
+
     elif opcion=="7":
         print("Hasta pronto!")
         bandera1=False
@@ -42,6 +64,8 @@ while (bandera1==True):
     else:
         print("Opcion invalida")
         print("")
+
+    
 
 
 """
@@ -69,24 +93,6 @@ while (bandera1==True):
             else:
                 print("Opcion invalida")
 
-        
-
-    elif opcion=="5":
-        print("1. Obtener ciudades con poblacion mayor a un numero especifico")
-        print("2. Obtener ciudades con poblacion menor a un numero especifico")
-        opcion2=input("Seleccione la opción que desea realizar:")
-
-        while (bandera2==True):
-            if opcion2=="1":
-
-                bandera2=False
-
-            elif opcion2=="2":
-
-                bandera2=False
-
-            else:
-                print("Opcion invalida")
 
                 
     elif opcion=="6":
